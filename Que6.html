@@ -1,0 +1,95 @@
+<!-- Q.6. Using HTML JavaScript CSS, show a registration form with 
+1. Name textfield that is compulsory field
+2. Date of birth is a date textfield having validation of max and min years such that no participants can be below 18 years of age and above 100 years of age
+3. Email validated email field
+4. Clear button. When the clear button is clicked all fields should be cleared.
+5. Ok button. When OK button is clicked show all the info entered in the textfields in a div tag below only if valid. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Que6</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        h1 {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        .container {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <br>
+    <br>
+    <form class="container" action="#">
+        <input id="name" type="text" placeholder="Enter Your Full Name" onkeyup="fun2()">
+        <p id="nerror"></p>
+        <br>
+        <input id="dbirth" type="date" max="2007-12-31" min="1907-01-02" onkeyup="fun3()">
+        <p id="dberror"></p>
+        <br>
+        <input id="email" type="email" placeholder="Enter Your Email" onkeydown="fun4()">
+        <p id="eerror"></p>
+        <br>
+        <input type="reset" value="Reset">
+        <br>
+        <input type="submit" value="Register" onclick="fun1()">
+        <br>
+    </form>
+    <script>
+        const fun1 = () => {
+            const name = document.getElementById("name").value
+            const date = document.getElementById("dbirth").value
+            const email = document.getElementById("email").value
+
+            if (name.length == 0) {
+                document.getElementById("nerror").innerHTML = "Name is Required";
+            }
+            if (date.length == 0) {
+                document.getElementById("dberror").innerHTML = "Date is Required";
+            }
+            if (email.length == 0) {
+                document.getElementById("eerror").innerHTML = "Email is Required";
+            }
+        }
+
+        function fun2() {
+            const name = document.getElementById("name").value
+            if (name.length == 0) {
+                document.getElementById("nerror").innerHTML = "Name Is Required"
+            }
+            else {
+                document.getElementById("nerror").innerHTML = ""
+            }
+        }
+        const fun3 = () => {
+            const date = document.getElementById("dbirth").value
+            if (date.length == 0) {
+                document.getElementById("dberror").innerHTML = "Date is Required"
+            }
+            else {
+                document.getElementById("dberror").innerHTML = "";
+            }
+        }
+        const fun4 = () => {
+            const email = document.getElementById("email").value
+            if (email.length == 0) {
+                document.getElementById("eerror").innerHTML = "Email is Required"
+            }
+            else {
+                document.getElementById("eerror").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

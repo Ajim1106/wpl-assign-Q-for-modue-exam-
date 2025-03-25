@@ -1,0 +1,55 @@
+<!-- Q.2. Using JQuery CSS(), do the following changes
+1)	Select all p tags and set background as green
+2)	Select all p tags with class remaining and make them 200px
+3)	Select only third p tag and change font size as 40px
+4)	Set h1 content as ‘IET’
+5)	Get the content of all li tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+
+    </script>
+</head>
+<body>
+
+    <!-- 1)	Select all p tags and set background as green -->
+    <p>Lorem vero temporibus mollitia. Impedit distinctio quidem hic? Consequatur, illum nihil. Id praesentium ut magni maxime.</p>
+
+    <p>Lorem earum illum quod esse dolorum non nobis perspiciatis inventore, delectus aperiam, omnis eveniet, qui iure sint ea?</p>
+
+    <p>Lorem  tempore ratione, aliquam sit possimus hic quos omnis nobis dolorum molestiae suscipit ut velit, dolore, eveniet eius.</p>
+
+    <p>Lorem ipsum doloremque quas, numquam possimus est quo consequatur sint ea, explicabo ratione esse eveniet consectetur tempora nam!</p>
+
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    
+</body>
+
+<script>
+    // Q1
+    $("p").css("background-color","#7FFF00")
+    // $('p').css('color','pink')
+    
+    // Q2
+    // $("p").css("font-size","200px")
+    
+    // Q3
+    $("p:nth-of-type(3)").css("font-size","40px")
+
+    // Q4
+    $('p').text('IET')
+
+    //  Q5
+    $('p').get('li')
+</script>
+</html>

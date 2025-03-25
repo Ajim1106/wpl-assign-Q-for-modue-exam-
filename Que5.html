@@ -1,0 +1,43 @@
+<!-- Q.5. Using JQuery-
+Show a text field that accepts a string 
+Show a button 
+On click of the button show the textfield content in a <p> tag such that the textfield content is shown in reverse. 
+For example, if user enters hello in the textfield, show olleh in the <p> tag  -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Que5</title>
+    </head>
+    <body>
+        <Form>
+            <input id="data1" type="text">
+            <input type="button" value="Tap" onclick="fun1()"> 
+        </Form>
+        <p id="showdata">   </p>
+        <p>
+
+            <bdo dir="ltr">abcd efgh ijkl</bdo>
+        </p>
+        <script>
+            const fun1 = ()=> {
+                const data = document.getElementById("data1").value;
+                console.log(data);
+
+                var data2=[];
+                // console.log(data[2]);
+                var j=0;
+
+                for(i=data.length-1; i>=0; i--) {
+                    // console.log(data[j]);
+                    
+                        data2[j] = data[i];
+                        j++;
+                    
+                }
+                console.log(data2);
+                // // data2[2] = data [0]
+                 document.getElementById("showdata").innerHTML = data2;
+            }
+        </script>
+    </body>
+    </html>

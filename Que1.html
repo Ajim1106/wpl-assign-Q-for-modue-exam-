@@ -1,0 +1,45 @@
+<!-- Q.1. Using HTML and Javascript – Write an html that shows a Login Form having Username and Password Textfields. When a [Login] button is clicked check if the details are matching any of the following
+User = iet password=123
+User = cdac password=456
+User = software password=789
+If matching input is present show Welcome message in a <p> tag and clear the textfields, If matching input is not present show Error message in Red color in the <p> tag and clear the textfields-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Que1</title>
+</head>
+<body>
+    <form action="#" >
+        <input id="sname" type="text" placeholder="Enter Full Name">
+        <input id="spass" type="password" placeholder="Enter Password">
+        <input type="submit" value="Login" onclick="check()">
+        <p id="finalmsg"></p>
+    </form>
+    <script>
+        const check = ()=> {
+            const name = document.getElementById("sname").value;
+            const pass = document.getElementById("spass").value;
+            if(name == "iet" && pass == "123") {
+                document.getElementById("finalmsg").innerHTML="Welcome";
+                document.getElementById("sname").value="";
+                document.getElementById("spass").value="";
+            }
+            else if(name == "cdac" && pass == "456") {
+                document.getElementById("finalmsg").innerHTML="Welcome";
+                document.getElementById("sname").value="";
+                document.getElementById("spass").value="";
+            }
+            else if(name == "software" && pass == "789") {
+                document.getElementById("finalmsg").innerHTML="Welcome";
+                document.getElementById("sname").value="";
+                document.getElementById("spass").value="";
+            }
+            else {
+                document.getElementById("finalmsg").innerHTML="Error";
+                const red  = document.getElementById("finalmsg");
+                red.style.color= "red";
+            }
+        }
+    </script>
+</body>
+</html>

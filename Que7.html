@@ -1,0 +1,60 @@
+<!-- Q.7. Using HTML and JQuery-
+Show a textfield. Show a dropdown [B, I, U, BIU]
+When the user changes the selection of dropdown, show the content in a <p> tag as per the selection.
+If user selects 
+B = show content in bold 
+I= show content in italics
+U= show underlined content
+BIU = show bold italic and underlined content  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+
+    </script>
+
+    <title>Que7</title>
+</head>
+<body>
+        <p id="p">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel mollitia quia, tenetur voluptas exercitationem minus accusamus est hic quam itaque enim laudantium numquam quibusdam tempora fuga maiores repellat cumque eos? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, cupiditate expedita rem laudantium excepturi neque laboriosam totam aliquam accusantium distinctio nam commodi veniam repellendus temporibus eveniet, nesciunt consectetur error magni.
+        </p>
+        
+        <input type="button" value="B" onclick="fun1()">
+        <input type="button" value="I" onclick="fun2()">
+        <input type="button" value="U" onclick="fun3()">
+        <input type="button" value="BIU" onclick="fun4()">
+        <input type="button" value="RESET" onclick="fun5()">
+
+    <script>
+        // Q1
+        function fun1() {
+            $("p").css("font-weight","bold")
+        }
+        
+        // Q2
+        function fun2() {
+            $("p").css("font-style","italic")
+        }
+        
+        // Q3
+        function fun3() {
+            $("p").css("text-decoration","underline")
+        }
+        
+        // Q4
+        function fun4() {
+            fun1();
+            fun2();
+            fun3();
+        }
+        
+        function fun5() {
+            $("p").css("font-style","normal")
+            $("p").css("text-decoration","none")
+            $("p").css("font-weight","normal")
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- Q.4. Write HTML that shows a date textfield. When the date is changed show the selected date in the p tag that says that you selected:  show the date selected. Today is: show today's date -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Que4</title>
+ </head>
+ <body>
+    <form>
+        <input id="ddate" type="date" >
+        <input type="button" onclick="fun1()">
+    </form>
+    <p id="datedetail"></p>
+    <script>
+        function fun1() {
+            const data = document.getElementById("ddate").value
+            console.log(data);
+            document.getElementById("datedetail").innerHTML ="Today is :"+ data;
+            document.writeln(Date())
+        }
+    </script>
+ </body>
+ </html>
